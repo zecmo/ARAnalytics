@@ -92,7 +92,7 @@
 - (void)didShowNewPageView:(NSString *)pageTitle {
     [self event:@"Screen view" withProperties:@{ @"label": pageTitle }];
     [self.tracker set:kGAIScreenName value:pageTitle];
-    [self.tracker send:[[GAIDictionaryBuilder createAppView] build]];
+    [self.tracker send:[[GAIDictionaryBuilder createScreenView] build]];
 }
 
 - (void)logTimingEvent:(NSString *)event withInterval:(NSNumber *)interval  properties:(NSDictionary *)properties{
